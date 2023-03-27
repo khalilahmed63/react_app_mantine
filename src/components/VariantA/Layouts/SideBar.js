@@ -1,9 +1,7 @@
-// import Link from 'next/link';
-// import { useRouter } from 'next/router';
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function SideBar(props: any) {
+export default function SideBar(props) {
   // const router = useRouter();
 
   return (
@@ -40,9 +38,10 @@ export default function SideBar(props: any) {
             <li>
               <Link to="/">
                 <p
-                  className={`flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100 hover:text-gray-900 ${
-                    router.pathname.endsWith("/") && "text-gray-900 bg-gray-100"
-                  }`}
+                  className="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100 hover:text-gray-900 text-gray-900 bg-gray-100"
+                // className={`flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100 hover:text-gray-900 ${
+                //   router.pathname.endsWith("/") && "text-gray-900 bg-gray-100"
+                // }`}
                 >
                   <svg
                     aria-hidden="true"
@@ -62,10 +61,11 @@ export default function SideBar(props: any) {
             <li>
               <Link to="/devices">
                 <p
-                  className={`flex items-center p-2 text-base font-normal  hover:text-gray-900 rounded-lg  hover:bg-gray-100 ${
-                    router.pathname.endsWith("/devices") &&
-                    "text-gray-900 bg-gray-100"
-                  }`}
+                  className="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100 hover:text-gray-900 text-gray-900 bg-gray-100"
+                // className={`flex items-center p-2 text-base font-normal  hover:text-gray-900 rounded-lg  hover:bg-gray-100 ${
+                //   router.pathname.endsWith("/devices") &&
+                //   "text-gray-900 bg-gray-100"
+                // }`}
                 >
                   <svg
                     aria-hidden="true"
@@ -87,10 +87,11 @@ export default function SideBar(props: any) {
             <li>
               <Link to="/provision">
                 <p
-                  className={`flex items-center p-2 text-base font-normal rounded-lg hover:text-black hover:bg-gray-100 ${
-                    router.pathname.endsWith("/provision") &&
-                    "text-gray-900 bg-gray-100"
-                  }`}
+                  className="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100 hover:text-gray-900 text-gray-900 bg-gray-100"
+                // className={`flex items-center p-2 text-base font-normal rounded-lg hover:text-black hover:bg-gray-100 ${
+                //   router.pathname.endsWith("/provision") &&
+                //   "text-gray-900 bg-gray-100"
+                // }`}
                 >
                   <svg
                     aria-hidden="true"
@@ -114,10 +115,11 @@ export default function SideBar(props: any) {
             <li>
               <Link to="/projects">
                 <p
-                  className={`flex items-center p-2 text-base font-normal rounded-lg hover:text-black hover:bg-gray-100 ${
-                    router.pathname.endsWith("/projects") &&
-                    "text-gray-900 bg-gray-100"
-                  }`}
+                  className="flex items-center p-2 text-base font-normal rounded-lg hover:bg-gray-100 hover:text-gray-900 text-gray-900 bg-gray-100"
+                // className={`flex items-center p-2 text-base font-normal rounded-lg hover:text-black hover:bg-gray-100 ${
+                //   router.pathname.endsWith("/projects") &&
+                //   "text-gray-900 bg-gray-100"
+                // }`}
                 >
                   <svg
                     aria-hidden="true"

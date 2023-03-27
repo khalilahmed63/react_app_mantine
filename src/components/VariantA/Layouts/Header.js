@@ -1,12 +1,8 @@
 import { Burger, Header, Image, Paper, Stack, Text, Transition, createStyles } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-//   import { useStoreActions, useStoreState } from 'easy-peasy';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { Link } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
-import { ColorSchemeToggle } from '../../ColorSchemeToggle/ColorSchemeToggle';
-//   import LoginModal from '../Modals/LoginModal';
 
 const HEADER_HEIGHT = 90;
 
@@ -84,11 +80,11 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function NavigationHeader() {
-  const router = useRouter();
+  // const router = useRouter();
   const [opened, { toggle: settoggle }] = useDisclosure(false);
   const { classes } = useStyles();
   // console.log(router.pathname, 'pathname');
-  const [token, setToken] = useState<string | null>();
+  const [token, setToken] = useState();
 
   // const { loginModal } = useStoreState((state: any) => state.global);
   // const { setLoginModal } = useStoreActions((actions: any) => actions.global);
@@ -106,7 +102,7 @@ export default function NavigationHeader() {
         <Header height={HEADER_HEIGHT} className={`${classes.root}`}>
           <div className="flex justify-between items-center h-full mx-5 lg:mx-10">
             <div className="flex justify-start items-center">
-              <Link href="/" passHref>
+              <Link href="/">
                 <Image
                   alt="logo"
                   // height={100}
@@ -117,9 +113,9 @@ export default function NavigationHeader() {
             </div>
 
             <div className="flex md:hidden justify-center items-center">
-              <div className="flex justify-start items-center mb-6 mr-4">
+              {/* <div className="flex justify-start items-center mb-6 mr-4">
                 <ColorSchemeToggle />
-              </div>
+              </div> */}
               <Burger
                 opened={opened}
                 onClick={settoggle}
@@ -128,9 +124,9 @@ export default function NavigationHeader() {
               />
             </div>
             <div className="hidden md:flex justify-end items-center text-sm">
-              <div className="flex justify-start items-center mb-6 mr-4">
+              {/* <div className="flex justify-start items-center mb-6 mr-4">
                 <ColorSchemeToggle />
-              </div>
+              </div> */}
 
               {token === '123' ? (
                 <>
@@ -147,7 +143,7 @@ export default function NavigationHeader() {
                           // Remove an item from local storage
                           setToken(null);
                           localStorage.removeItem('token');
-                          router.push('/');
+                          // router.push('/');
                         }}
                       >
                         logout
@@ -189,7 +185,7 @@ export default function NavigationHeader() {
                                 // Remove an item from local storage
                                 setToken(null);
                                 localStorage.removeItem('token');
-                                router.push('/');
+                                // router.push('/');
                               }}
                               className="text-red-500 hover:text-gray-300 hover:underline underline-offset-4"
                             >
@@ -207,22 +203,22 @@ export default function NavigationHeader() {
                             Login
                           </Text>
                         )}
-                        <Link href="/" passHref>
+                        <Link href="/" >
                           <Text className=" hover:text-gray-300 hover:underline underline-offset-4">
                             Dashboard
                           </Text>
                         </Link>
-                        <Link href="/devices" passHref>
+                        <Link href="/devices" >
                           <Text className=" hover:text-gray-300 hover:underline underline-offset-4">
                             Devices
                           </Text>
                         </Link>
-                        <Link href="/provision" passHref>
+                        <Link href="/provision" >
                           <Text className=" hover:text-gray-300 hover:underline underline-offset-4">
                             Provision
                           </Text>
                         </Link>
-                        <Link href="/projects" passHref>
+                        <Link href="/projects" >
                           <Text className=" hover:text-gray-300 hover:underline underline-offset-4">
                             Projects
                           </Text>

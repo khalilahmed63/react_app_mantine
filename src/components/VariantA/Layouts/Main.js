@@ -3,7 +3,7 @@ import React from 'react';
 import NavigationHeader from './Header';
 import SideBar from './SideBar';
 
-export default function Main(props: any) {
+export default function Main(props) {
   return (
     <>
       <div className="max-w-screen-2xl">
