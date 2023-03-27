@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+// import Main from './components/VariantA/Layouts/Main';
+// import Main from './components/VariantA/Layouts/Main';
+// import {
+//   BrowserRouter,
+//   Routes,s
+//   Route
+// } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <BrowserRouter>
+        <Navbar SiteName={'Khalil'} About={'myAbout'} mode={mode} togglemode={togglemode} togglemode2={togglemode2} />
+        <Routes>
+          <Route path="/" element={<Textbox mode={mode} showalert={showalert} />} />
+          <Route path="About" element={<About mode={mode} />} />
+        </Routes>
+      </BrowserRouter> */}
+      {/* <Main> */}
+        asdfasdfasfgasdfasdf
+
+      {/* </Main> */}
+    </>
   );
 }
 
