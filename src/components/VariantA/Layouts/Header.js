@@ -83,7 +83,6 @@ export default function NavigationHeader() {
   // const router = useRouter();
   const [opened, { toggle: settoggle }] = useDisclosure(false);
   const { classes } = useStyles();
-  // console.log(router.pathname, 'pathname');
   const [token, setToken] = useState();
 
   // const { loginModal } = useStoreState((state: any) => state.global);

@@ -1,5 +1,6 @@
 import './App.css';
 import Main from './components/VariantA/Layouts/Main';
+import HomeVariantA from './components/VariantA/HomePage/Home';
 import {
   BrowserRouter,
   Routes,
@@ -10,11 +11,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <Navbar SiteName={'Khalil'} About={'myAbout'} mode={mode} togglemode={togglemode} togglemode2={togglemode2} /> */}
         <Main>
           <Routes>
-            asdfasdfasfgasdfasdf
-            {/* <Route path="/" element={<Textbox mode={mode} showalert={showalert} />} /> */}
+            <Route path="/" element={<HomeVariantA />} />
             {/* <Route path="About" element={<About mode={mode} />} /> */}
           </Routes>
         </Main>
